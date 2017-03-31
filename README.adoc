@@ -1,17 +1,70 @@
-:gh-repo-owner: jmini
+:gh-repo-owner: BSI-Business-Systems-Integration-AG
 :gh-repo-name: demo-jhipster-democamp-2017
 
 :project-name: Demo JHipster - Democamp 2017
 :license: http://www.eclipse.org/legal/epl-v10.html
 :license-name: Eclipse Public License - v 1.0
 
+:git-repository: {gh-repo-owner}/{gh-repo-name}
+:issues: https://github.com/{git-repository}/issues
+
 = {project-name}
 JHipster Demo - Eclipse DemoCamp Zurich 2017
 
 == Projects
 
-* link:jhipster-scout-generator/README.adoc[jhipster-scout-generator]
-* link:jhipster-scout-presentation/README.adoc[jhipster-scout-presentation]
+* link:jhipster-scout-generator/[jhipster-scout-generator]
+* link:jhipster-scout-presentation/[jhipster-scout-presentation]
+
+== Eclipse IDE installation
+
+Take link:http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3[Eclipse IDE for Java Developers - Neon 3] as base.
+
+=== JHipster IDE
+
+Refer to the link:https://marketplace.eclipse.org/content/jhipster-ide[marketplace page] of JHipster IDE or install all features from this P2 Update site:
+
+----
+https://dl.bintray.com/jhipster/jhipster-ide/io.github.jhipster-ide-1.1.1/
+----
+
+
+=== Terminal Plugin
+
+NOTE: TODO add a note about the required plugin/feature.
+
+
+=== Eclipse Scout SDK
+
+The SpringBoot integration is available with the Oxygen Version of Eclipse Scout (Version 7.0, released in June 2017)
+
+Install the `org.eclipse.scout.sdk-feature.source.feature.group` feature from this update site:
+
+----
+http://download.eclipse.org/scout/releases/6.1/6.1.0/M6/
+----
+
+NOTE: TODO update Scout SDK to 7.0 when the first version is released.
+
+== Links
+
+=== JHipster IDE
+
+https://jhipster.github.io/jhipster-ide/
+
+=== Eclipse Scout
+
+link:http://eclipsescout.github.io/7.0/beginners-guide.html#cha-helloworld[Tutotial: beginners-guide] (and one day tutorial in the same document)
+
+Scout Demo Application:
+
+* Deployed: https://scout.bsi-software.com/contacts/
+* Source code: link:https://github.com/BSI-Business-Systems-Integration-AG/org.eclipse.scout.docs[org.eclipse.scout.docs repository] (checkout the `features/version/6.1.0.M6` branch)
+
+SpringBoot integration:
+
+* https://github.com/BSI-Business-Systems-Integration-AG/ScoutBoot
+* https://github.com/BSI-Business-Systems-Integration-AG/ScoutBoot-Tasks
 
 
 == Get in touch
