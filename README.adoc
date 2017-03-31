@@ -1,0 +1,24 @@
+:gh-repo-owner: jmini
+:gh-repo-name: demo-jhipster-democamp-2017
+
+:project-name: Demo JHipster - Democamp 2017
+:license: http://www.eclipse.org/legal/epl-v10.html
+:license-name: Eclipse Public License - v 1.0
+
+= {project-name}
+JHipster Demo - Eclipse DemoCamp Zurich 2017
+
+== Projects
+
+* link:jhipster-scout-generator/README.adoc[jhipster-scout-generator]
+* link:jhipster-scout-presentation/README.adoc[jhipster-scout-presentation]
+
+
+== Get in touch
+
+Use the link:{issues}[{project-name} issue tracker] on GitHub.
+
+
+== License
+
+link:{license}[{license-name}]

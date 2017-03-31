@@ -1,0 +1,4 @@
+= jhipster-scout-generator
+
+NOTE: TODO: placeholder for the jhipster yo generator for a Scout project.
+            this folder will be a VSCode project

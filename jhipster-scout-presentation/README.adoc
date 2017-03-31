@@ -1,0 +1,3 @@
+= jhipster-scout-presentation
+
+This is an Eclipse IDE project where the `*.jdl` Files should be edited and where JHipster should be invoked.

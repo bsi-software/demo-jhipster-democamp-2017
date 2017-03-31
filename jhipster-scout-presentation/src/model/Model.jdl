@@ -1,0 +1,24 @@
+entity Address {
+	street String required,
+	streetNr Integer required,
+	city String required,
+	zip Integer required,
+	country String
+}
+
+entity Person {
+	fristName String required,
+	lastName String required,
+	gender Gender
+}
+
+enum Gender {
+	Male, Female
+}
+
+relationship ManyToMany {
+	Person to Address
+}
+
+dto * with mapstruct except User
+service * with serviceClass except User
