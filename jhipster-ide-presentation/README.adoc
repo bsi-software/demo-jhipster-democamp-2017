@@ -1,0 +1,4 @@
+= jhipster-ide-presentation
+
+NOTE: TODO: placeholder for the jhipster ide presentation.
+            
