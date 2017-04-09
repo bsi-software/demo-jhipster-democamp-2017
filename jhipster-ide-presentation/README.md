@@ -11,7 +11,7 @@ The ten steps to get a JHipster project up and running:
 	
 2. Create a new JDL project 
 
-3. Switch to JDL editor and and replace the last part with the following snippet:
+3. Open the `src/model/Model.jdl` file and replace the last part with the following snippet:
 ---
 	paginate JobHistory, Employee with infinite-scroll
 	paginate Job with pagination
