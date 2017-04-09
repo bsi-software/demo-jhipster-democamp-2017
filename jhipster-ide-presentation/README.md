@@ -25,7 +25,7 @@ The ten steps to get a JHipster project up and running:
    `$ yo jhipster`</br>
    `$ ./mvnw clean install` 
 	
-5. Import JDL model with and generate artifacts:
+5. Import JDL model and generate artifacts:
 
    `$ yo jhipster:import-jdl src/model/Model.jdl`
 
