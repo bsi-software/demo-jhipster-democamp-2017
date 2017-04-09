@@ -23,7 +23,7 @@ The ten steps to get a JHipster project up and running:
 4. Start a terminal shell in the top folder of your Eclipse project and execute the following lines:
 
    `$ yo jhipster # setup a JHipster project`
-   `$ ./mvnw clean install`
+   `$ ./mvnw clean install` 
 	
 5. Import JDL model with and generate artifacts:
 
