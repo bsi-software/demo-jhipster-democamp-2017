@@ -21,10 +21,12 @@ The ten steps to get a JHipster project up and running:
 ---
 	
 4. Start a terminal shell in the top folder of your Eclipse project and execute the following line:
-	`$ yo & ./mvnw clean install`
+
+   `$ yo & ./mvnw clean install`
 	
 5. Import jdl with:
-	`$ yo jhipster:import-jdl src/model/Model.jdl`
+
+   `$ yo jhipster:import-jdl src/model/Model.jdl`
 
 6. Refresh project in Eclipse and convert it to a maven project
 
