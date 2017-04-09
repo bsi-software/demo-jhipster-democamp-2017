@@ -1,4 +1,5 @@
-= JHipster IDE Presentation
+JHipster IDE Presentation
+=========================
 
 The ten steps to get a JHipster project up and running:
 
