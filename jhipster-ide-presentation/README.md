@@ -29,7 +29,7 @@ The ten steps to get a JHipster project up and running:
 
    `$ yo jhipster:import-jdl src/model/Model.jdl`
 
-6. Refresh project in Eclipse and convert it to a maven project
+6. Refresh project in Eclipse and convert it to a maven project (right click on project name -> Configure -> Convert to Maven Project)
 
 7. Change project settings (src and output folders)
 
