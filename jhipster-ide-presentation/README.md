@@ -20,7 +20,7 @@ The ten steps to get a JHipster project up and running:
 	microservice * with mymicroservice
 ---
 	
-4. Start a terminal shell in Eclipse and execute the following line:
+4. Start a terminal shell in the top folder of your Eclipse project and execute the following line:
 	`$ yo & ./mvnw clean install`
 	
 5. Import jdl with:
