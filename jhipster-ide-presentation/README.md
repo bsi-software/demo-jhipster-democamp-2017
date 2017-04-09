@@ -3,10 +3,10 @@
 The ten steps to get a JHipster project up and running:
 
 1. Installation steps:
-	a) [Install JHipster](https://jhipster.github.io/installation/)
-	b) [Download](http://www.eclipse.org/downloads/) and install an Eclipse Distro
-	c) [Install JHipster IDE from Eclipse Marketplace](https://marketplace.eclipse.org/content/jhipster-ide)
-	d) [Install Eclipse Terminal (TM) feature from Eclipse Marketplace](https://marketplace.eclipse.org/content/tm-terminal)
+	- [Install JHipster](https://jhipster.github.io/installation/)
+	- [Download](http://www.eclipse.org/downloads/) and install an Eclipse Distro
+	- [Install JHipster IDE from Eclipse Marketplace](https://marketplace.eclipse.org/content/jhipster-ide)
+	- [Install Eclipse Terminal (TM) feature from Eclipse Marketplace](https://marketplace.eclipse.org/content/tm-terminal)
 	
 2. Create a new JDL project 
 
