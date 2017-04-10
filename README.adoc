@@ -20,6 +20,9 @@ JHipster Demo - Eclipse DemoCamp Zurich 2017
 
 Take link:http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3[Eclipse IDE for Java Developers - Neon 3] as base.
 
+You can also use this Oomph setup file link:https://raw.githubusercontent.com/BSI-Business-Systems-Integration-AG/demo-jhipster-democamp-2017/master/eclipse.setup[eclipse.setup] with the Eclipse Installer to setup your Eclipse IDE.
+
+
 === JHipster IDE
 
 Refer to the link:https://marketplace.eclipse.org/content/jhipster-ide[marketplace page] of JHipster IDE or install all features from this P2 Update site:
@@ -31,7 +34,7 @@ https://dl.bintray.com/jhipster/jhipster-ide/io.github.jhipster-ide-1.1.1/
 
 === Terminal Plugin
 
-NOTE: TODO add a note about the required plugin/feature.
+See the link:https://marketplace.eclipse.org/content/tm-terminal[Eclipse Terminal (TM)] in the Eclipse Marketplace.
 
 
 === Eclipse Scout SDK
