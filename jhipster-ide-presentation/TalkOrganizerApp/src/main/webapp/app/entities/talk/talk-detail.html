@@ -1,0 +1,33 @@
+
+<div>
+    <h2><span data-translate="talkOrganizerApp.talk.detail.title">Talk</span> {{vm.talk.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="talkOrganizerApp.talk.title">Title</span></dt>
+        <dd>
+            <span>{{vm.talk.title}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.talk.description">Description</span></dt>
+        <dd>
+            <span>{{vm.talk.description}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.talk.speaker">Speaker</span></dt>
+        <dd>
+            <span ng-repeat="speaker in vm.talk.speakers">
+                <a ui-sref="speaker-detail({id: speaker.id})">{{speaker.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="talk-detail.edit({id:vm.talk.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

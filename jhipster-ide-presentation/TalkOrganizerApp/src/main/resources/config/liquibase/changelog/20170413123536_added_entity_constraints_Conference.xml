@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Conference.
+    -->
+    <changeSet id="20170413123536-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="conferences_id"
+                                 baseTableName="conference_talk"
+                                 constraintName="fk_conference_talk_conferences_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="conference"/>
+        <addForeignKeyConstraint baseColumnNames="talks_id"
+                                 baseTableName="conference_talk"
+                                 constraintName="fk_conference_talk_talks_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="talk"/>
+        
+    </changeSet>
+</databaseChangeLog>
