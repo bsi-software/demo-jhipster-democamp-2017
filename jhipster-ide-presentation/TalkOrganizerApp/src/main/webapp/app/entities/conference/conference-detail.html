@@ -1,0 +1,37 @@
+
+<div>
+    <h2><span data-translate="talkOrganizerApp.conference.detail.title">Conference</span> {{vm.conference.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="talkOrganizerApp.conference.conferenceId">Conference Id</span></dt>
+        <dd>
+            <span>{{vm.conference.conferenceId}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.conference.title">Title</span></dt>
+        <dd>
+            <span>{{vm.conference.title}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.conference.date">Date</span></dt>
+        <dd>
+            <span>{{vm.conference.date | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.conference.talk">Talk</span></dt>
+        <dd>
+            <span ng-repeat="talk in vm.conference.talks">
+                <a ui-sref="talk-detail({id: talk.id})">{{talk.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="conference-detail.edit({id:vm.conference.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

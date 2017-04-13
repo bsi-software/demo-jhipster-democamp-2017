@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="talkOrganizerApp.speaker.detail.title">Speaker</span> {{vm.speaker.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="talkOrganizerApp.speaker.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.speaker.firstName}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.speaker.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.speaker.lastName}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.speaker.email">Email</span></dt>
+        <dd>
+            <span>{{vm.speaker.email}}</span>
+        </dd>
+        <dt><span data-translate="talkOrganizerApp.speaker.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.speaker.phoneNumber}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="speaker-detail.edit({id:vm.speaker.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,51 @@
+/**
+ * This is a sample application to demonstrate 
+ * JHipster IDE features to the Eclipse DemoCamp Zurich '17
+ */
+
+entity Conference {
+	conferenceId Long required
+	title String required
+	date ZonedDateTime required
+}
+
+entity Location {
+  locationId Long
+  streetAddress String
+  postalCode String
+  city String
+  stateProvince String
+  countryName String
+}
+
+entity Talk {
+	id Long required
+	title String required	
+	description String
+}
+
+entity Speaker {
+	id Long required
+	firstName String
+  	lastName String
+  	email String
+  	phoneNumber String	
+}
+
+relationship OneToMany {
+  Conference{location} to Location{conference}
+}
+
+relationship ManyToMany {
+  Conference{talk} to Talk{conference}
+}
+
+relationship ManyToMany {
+  Talk{speaker} to Speaker{talk}
+}
+
+paginate Talk, Speaker with infinite-scroll
+paginate Conference with pagination
+dto * with mapstruct
+service * with serviceClass
+microservice * with talkorgamicroservice

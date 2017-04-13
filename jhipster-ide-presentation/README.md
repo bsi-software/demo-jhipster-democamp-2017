@@ -38,3 +38,5 @@ The ten steps to get a JHipster project up and running:
 9. Copy `*.war` from output (target) folder to `src/main/docker` and build a docker image
 
 10. Run image from Xdocker Image Browser & open app from Xdocker Container Browser View
+
+![image](doc/ScreenshotTalkOrginzerApp.png)
