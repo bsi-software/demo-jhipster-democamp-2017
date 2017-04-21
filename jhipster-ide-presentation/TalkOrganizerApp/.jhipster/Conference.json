@@ -18,13 +18,6 @@
     ],
     "fields": [
         {
-            "fieldName": "conferenceId",
-            "fieldType": "Long",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "title",
             "fieldType": "String",
             "fieldValidateRules": [
@@ -45,5 +38,5 @@
     "dto": "mapstruct",
     "pagination": "pagination",
     "service": "serviceClass",
-    "microserviceName": "mymicroservice"
+    "microserviceName": "talkorgamicroservice"
 }

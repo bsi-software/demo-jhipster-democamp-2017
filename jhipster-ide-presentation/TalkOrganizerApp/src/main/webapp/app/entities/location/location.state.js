@@ -104,7 +104,6 @@
                     resolve: {
                         entity: function () {
                             return {
-                                locationId: null,
                                 streetAddress: null,
                                 postalCode: null,
                                 city: null,

@@ -10,10 +10,6 @@
     ],
     "fields": [
         {
-            "fieldName": "locationId",
-            "fieldType": "Long"
-        },
-        {
             "fieldName": "streetAddress",
             "fieldType": "String"
         },
@@ -39,5 +35,5 @@
     "dto": "mapstruct",
     "pagination": "no",
     "service": "serviceClass",
-    "microserviceName": "mymicroservice"
+    "microserviceName": "talkorgamicroservice"
 }

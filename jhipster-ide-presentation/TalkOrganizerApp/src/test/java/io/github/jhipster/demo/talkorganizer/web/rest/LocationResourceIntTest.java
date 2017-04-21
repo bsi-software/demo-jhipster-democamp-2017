@@ -40,9 +40,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = TalkOrganizerApp.class)
 public class LocationResourceIntTest {
 
-    private static final Long DEFAULT_LOCATION_ID = 1L;
-    private static final Long UPDATED_LOCATION_ID = 2L;
-
     private static final String DEFAULT_STREET_ADDRESS = "AAAAAAAAAA";
     private static final String UPDATED_STREET_ADDRESS = "BBBBBBBBBB";
 
@@ -101,7 +98,6 @@ public class LocationResourceIntTest {
      */
     public static Location createEntity(EntityManager em) {
         Location location = new Location()
-            .locationId(DEFAULT_LOCATION_ID)
             .streetAddress(DEFAULT_STREET_ADDRESS)
             .postalCode(DEFAULT_POSTAL_CODE)
             .city(DEFAULT_CITY)
@@ -131,7 +127,6 @@ public class LocationResourceIntTest {
         List<Location> locationList = locationRepository.findAll();
         assertThat(locationList).hasSize(databaseSizeBeforeCreate + 1);
         Location testLocation = locationList.get(locationList.size() - 1);
-        assertThat(testLocation.getLocationId()).isEqualTo(DEFAULT_LOCATION_ID);
         assertThat(testLocation.getStreetAddress()).isEqualTo(DEFAULT_STREET_ADDRESS);
         assertThat(testLocation.getPostalCode()).isEqualTo(DEFAULT_POSTAL_CODE);
         assertThat(testLocation.getCity()).isEqualTo(DEFAULT_CITY);
@@ -170,7 +165,6 @@ public class LocationResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(location.getId().intValue())))
-            .andExpect(jsonPath("$.[*].locationId").value(hasItem(DEFAULT_LOCATION_ID.intValue())))
             .andExpect(jsonPath("$.[*].streetAddress").value(hasItem(DEFAULT_STREET_ADDRESS.toString())))
             .andExpect(jsonPath("$.[*].postalCode").value(hasItem(DEFAULT_POSTAL_CODE.toString())))
             .andExpect(jsonPath("$.[*].city").value(hasItem(DEFAULT_CITY.toString())))
@@ -189,7 +183,6 @@ public class LocationResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(location.getId().intValue()))
-            .andExpect(jsonPath("$.locationId").value(DEFAULT_LOCATION_ID.intValue()))
             .andExpect(jsonPath("$.streetAddress").value(DEFAULT_STREET_ADDRESS.toString()))
             .andExpect(jsonPath("$.postalCode").value(DEFAULT_POSTAL_CODE.toString()))
             .andExpect(jsonPath("$.city").value(DEFAULT_CITY.toString()))
@@ -215,7 +208,6 @@ public class LocationResourceIntTest {
         // Update the location
         Location updatedLocation = locationRepository.findOne(location.getId());
         updatedLocation
-            .locationId(UPDATED_LOCATION_ID)
             .streetAddress(UPDATED_STREET_ADDRESS)
             .postalCode(UPDATED_POSTAL_CODE)
             .city(UPDATED_CITY)
@@ -232,7 +224,6 @@ public class LocationResourceIntTest {
         List<Location> locationList = locationRepository.findAll();
         assertThat(locationList).hasSize(databaseSizeBeforeUpdate);
         Location testLocation = locationList.get(locationList.size() - 1);
-        assertThat(testLocation.getLocationId()).isEqualTo(UPDATED_LOCATION_ID);
         assertThat(testLocation.getStreetAddress()).isEqualTo(UPDATED_STREET_ADDRESS);
         assertThat(testLocation.getPostalCode()).isEqualTo(UPDATED_POSTAL_CODE);
         assertThat(testLocation.getCity()).isEqualTo(UPDATED_CITY);

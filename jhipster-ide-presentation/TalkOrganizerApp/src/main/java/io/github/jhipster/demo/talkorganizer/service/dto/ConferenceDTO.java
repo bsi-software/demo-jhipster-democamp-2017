@@ -16,9 +16,6 @@ public class ConferenceDTO implements Serializable {
     private Long id;
 
     @NotNull
-    private Long conferenceId;
-
-    @NotNull
     private String title;
 
     @NotNull
@@ -32,13 +29,6 @@ public class ConferenceDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-    public Long getConferenceId() {
-        return conferenceId;
-    }
-
-    public void setConferenceId(Long conferenceId) {
-        this.conferenceId = conferenceId;
     }
     public String getTitle() {
         return title;
@@ -88,7 +78,6 @@ public class ConferenceDTO implements Serializable {
     public String toString() {
         return "ConferenceDTO{" +
             "id=" + id +
-            ", conferenceId='" + conferenceId + "'" +
             ", title='" + title + "'" +
             ", date='" + date + "'" +
             '}';

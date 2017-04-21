@@ -15,7 +15,6 @@
             "detail": {
                 "title": "Conference"
             },
-            "conferenceId": "Conference Id",
             "title": "Title",
             "date": "Date",
             "location": "Location",

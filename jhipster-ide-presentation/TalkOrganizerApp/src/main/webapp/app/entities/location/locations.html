@@ -19,7 +19,6 @@
             <thead>
                 <tr>
                     <th><span data-translate="global.field.id">ID</span></th>
-                    <th><span data-translate="talkOrganizerApp.location.locationId">Location Id</span></th>
                     <th><span data-translate="talkOrganizerApp.location.streetAddress">Street Address</span></th>
                     <th><span data-translate="talkOrganizerApp.location.postalCode">Postal Code</span></th>
                     <th><span data-translate="talkOrganizerApp.location.city">City</span></th>
@@ -32,7 +31,6 @@
             <tbody>
                 <tr ng-repeat="location in vm.locations track by location.id">
                     <td><a ui-sref="location-detail({id:location.id})">{{location.id}}</a></td>
-                    <td>{{location.locationId}}</td>
                     <td>{{location.streetAddress}}</td>
                     <td>{{location.postalCode}}</td>
                     <td>{{location.city}}</td>

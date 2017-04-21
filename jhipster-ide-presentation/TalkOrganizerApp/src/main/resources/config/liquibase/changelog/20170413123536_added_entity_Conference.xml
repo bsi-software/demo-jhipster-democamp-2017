@@ -22,10 +22,6 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="conference_id" type="bigint">
-                <constraints nullable="false" />
-            </column>
-
             <column name="title" type="varchar(255)">
                 <constraints nullable="false" />
             </column>

@@ -19,7 +19,6 @@
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="conferenceId"><span data-translate="talkOrganizerApp.conference.conferenceId">Conference Id</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="title"><span data-translate="talkOrganizerApp.conference.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="date"><span data-translate="talkOrganizerApp.conference.date">Date</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
@@ -28,7 +27,6 @@
             <tbody>
                 <tr ng-repeat="conference in vm.conferences track by conference.id">
                     <td><a ui-sref="conference-detail({id:conference.id})">{{conference.id}}</a></td>
-                    <td>{{conference.conferenceId}}</td>
                     <td>{{conference.title}}</td>
                     <td>{{conference.date | date:'medium'}}</td>
                     <td class="text-right">

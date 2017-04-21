@@ -4,13 +4,11 @@
  */
 
 entity Conference {
-	conferenceId Long required
 	title String required
 	date ZonedDateTime required
 }
 
 entity Location {
-  locationId Long
   streetAddress String
   postalCode String
   city String
@@ -19,13 +17,11 @@ entity Location {
 }
 
 entity Talk {
-	id Long required
 	title String required	
 	description String
 }
 
 entity Speaker {
-	id Long required
 	firstName String
   	lastName String
   	email String

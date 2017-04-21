@@ -45,9 +45,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = TalkOrganizerApp.class)
 public class ConferenceResourceIntTest {
 
-    private static final Long DEFAULT_CONFERENCE_ID = 1L;
-    private static final Long UPDATED_CONFERENCE_ID = 2L;
-
     private static final String DEFAULT_TITLE = "AAAAAAAAAA";
     private static final String UPDATED_TITLE = "BBBBBBBBBB";
 
@@ -97,7 +94,6 @@ public class ConferenceResourceIntTest {
      */
     public static Conference createEntity(EntityManager em) {
         Conference conference = new Conference()
-            .conferenceId(DEFAULT_CONFERENCE_ID)
             .title(DEFAULT_TITLE)
             .date(DEFAULT_DATE);
         return conference;
@@ -124,7 +120,6 @@ public class ConferenceResourceIntTest {
         List<Conference> conferenceList = conferenceRepository.findAll();
         assertThat(conferenceList).hasSize(databaseSizeBeforeCreate + 1);
         Conference testConference = conferenceList.get(conferenceList.size() - 1);
-        assertThat(testConference.getConferenceId()).isEqualTo(DEFAULT_CONFERENCE_ID);
         assertThat(testConference.getTitle()).isEqualTo(DEFAULT_TITLE);
         assertThat(testConference.getDate()).isEqualTo(DEFAULT_DATE);
     }
@@ -147,25 +142,6 @@ public class ConferenceResourceIntTest {
         // Validate the Alice in the database
         List<Conference> conferenceList = conferenceRepository.findAll();
         assertThat(conferenceList).hasSize(databaseSizeBeforeCreate);
-    }
-
-    @Test
-    @Transactional
-    public void checkConferenceIdIsRequired() throws Exception {
-        int databaseSizeBeforeTest = conferenceRepository.findAll().size();
-        // set the field null
-        conference.setConferenceId(null);
-
-        // Create the Conference, which fails.
-        ConferenceDTO conferenceDTO = conferenceMapper.conferenceToConferenceDTO(conference);
-
-        restConferenceMockMvc.perform(post("/api/conferences")
-            .contentType(TestUtil.APPLICATION_JSON_UTF8)
-            .content(TestUtil.convertObjectToJsonBytes(conferenceDTO)))
-            .andExpect(status().isBadRequest());
-
-        List<Conference> conferenceList = conferenceRepository.findAll();
-        assertThat(conferenceList).hasSize(databaseSizeBeforeTest);
     }
 
     @Test
@@ -217,7 +193,6 @@ public class ConferenceResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(conference.getId().intValue())))
-            .andExpect(jsonPath("$.[*].conferenceId").value(hasItem(DEFAULT_CONFERENCE_ID.intValue())))
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE.toString())))
             .andExpect(jsonPath("$.[*].date").value(hasItem(sameInstant(DEFAULT_DATE))));
     }
@@ -233,7 +208,6 @@ public class ConferenceResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(conference.getId().intValue()))
-            .andExpect(jsonPath("$.conferenceId").value(DEFAULT_CONFERENCE_ID.intValue()))
             .andExpect(jsonPath("$.title").value(DEFAULT_TITLE.toString()))
             .andExpect(jsonPath("$.date").value(sameInstant(DEFAULT_DATE)));
     }
@@ -256,7 +230,6 @@ public class ConferenceResourceIntTest {
         // Update the conference
         Conference updatedConference = conferenceRepository.findOne(conference.getId());
         updatedConference
-            .conferenceId(UPDATED_CONFERENCE_ID)
             .title(UPDATED_TITLE)
             .date(UPDATED_DATE);
         ConferenceDTO conferenceDTO = conferenceMapper.conferenceToConferenceDTO(updatedConference);
@@ -270,7 +243,6 @@ public class ConferenceResourceIntTest {
         List<Conference> conferenceList = conferenceRepository.findAll();
         assertThat(conferenceList).hasSize(databaseSizeBeforeUpdate);
         Conference testConference = conferenceList.get(conferenceList.size() - 1);
-        assertThat(testConference.getConferenceId()).isEqualTo(UPDATED_CONFERENCE_ID);
         assertThat(testConference.getTitle()).isEqualTo(UPDATED_TITLE);
         assertThat(testConference.getDate()).isEqualTo(UPDATED_DATE);
     }

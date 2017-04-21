@@ -13,8 +13,6 @@ public class LocationDTO implements Serializable {
 
     private Long id;
 
-    private Long locationId;
-
     private String streetAddress;
 
     private String postalCode;
@@ -33,13 +31,6 @@ public class LocationDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-    public Long getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(Long locationId) {
-        this.locationId = locationId;
     }
     public String getStreetAddress() {
         return streetAddress;
@@ -110,7 +101,6 @@ public class LocationDTO implements Serializable {
     public String toString() {
         return "LocationDTO{" +
             "id=" + id +
-            ", locationId='" + locationId + "'" +
             ", streetAddress='" + streetAddress + "'" +
             ", postalCode='" + postalCode + "'" +
             ", city='" + city + "'" +

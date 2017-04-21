@@ -30,10 +30,6 @@ public class Conference implements Serializable {
     private Long id;
 
     @NotNull
-    @Column(name = "conference_id", nullable = false)
-    private Long conferenceId;
-
-    @NotNull
     @Column(name = "title", nullable = false)
     private String title;
 
@@ -59,19 +55,6 @@ public class Conference implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getConferenceId() {
-        return conferenceId;
-    }
-
-    public Conference conferenceId(Long conferenceId) {
-        this.conferenceId = conferenceId;
-        return this;
-    }
-
-    public void setConferenceId(Long conferenceId) {
-        this.conferenceId = conferenceId;
     }
 
     public String getTitle() {
@@ -174,7 +157,6 @@ public class Conference implements Serializable {
     public String toString() {
         return "Conference{" +
             "id=" + id +
-            ", conferenceId='" + conferenceId + "'" +
             ", title='" + title + "'" +
             ", date='" + date + "'" +
             '}';

@@ -15,7 +15,6 @@
             "detail": {
                 "title": "Location"
             },
-            "locationId": "Location Id",
             "streetAddress": "Street Address",
             "postalCode": "Postal Code",
             "city": "City",

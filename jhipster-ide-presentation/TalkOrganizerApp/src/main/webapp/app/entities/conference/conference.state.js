@@ -124,7 +124,6 @@
                     resolve: {
                         entity: function () {
                             return {
-                                conferenceId: null,
                                 title: null,
                                 date: null,
                                 id: null
