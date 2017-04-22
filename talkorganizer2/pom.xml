@@ -13,6 +13,17 @@
 	<artifactId>talkorganizer2</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
+	<repositories>
+		<repository>
+		  <id>democamp.release</id>
+		  <name>democamp-release-repo</name>
+		  <url>https://dl.bintray.com/jmini/democamp-2017/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.scout.boot</groupId>
