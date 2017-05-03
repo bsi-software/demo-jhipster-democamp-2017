@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <groupId>org.springframework.boot</groupId>
-        <version>1.5.2.RELEASE</version>
+        <groupId>org.eclipse.scout.boot</groupId>
+        <artifactId>scout-boot</artifactId>
+        <version>7.0.0.alpha1</version>
         <relativePath />
     </parent>
 
@@ -95,7 +95,28 @@
         <yarn.version>v0.21.3</yarn.version>
     </properties>
 
+    <repositories>
+        <repository>
+          <id>democamp.release</id>
+          <name>democamp-release-repo</name>
+          <url>https://dl.bintray.com/jmini/democamp-2017/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.scout.boot</groupId>
+            <artifactId>scout-boot-ui</artifactId>
+            <version>${scout.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.scout.boot</groupId>
+            <artifactId>scout-boot-ui-dev</artifactId>
+            <version>${scout.boot.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-hibernate5</artifactId>

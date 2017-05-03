@@ -39,17 +39,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private final RememberMeServices rememberMeServices;
 
-    private final CorsFilter corsFilter;
+   /* private final CorsFilter corsFilter; */
 
     public SecurityConfiguration(AuthenticationManagerBuilder authenticationManagerBuilder, UserDetailsService userDetailsService,
-        JHipsterProperties jHipsterProperties, RememberMeServices rememberMeServices,
-        CorsFilter corsFilter) {
+        JHipsterProperties jHipsterProperties, RememberMeServices rememberMeServices /*,
+        CorsFilter corsFilter*/) {
 
         this.authenticationManagerBuilder = authenticationManagerBuilder;
         this.userDetailsService = userDetailsService;
         this.jHipsterProperties = jHipsterProperties;
         this.rememberMeServices = rememberMeServices;
-        this.corsFilter = corsFilter;
+//        this.corsFilter = corsFilter;
     }
 
     @PostConstruct
@@ -106,10 +106,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
             .csrf()
             .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-        .and()
-            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
-            .exceptionHandling()
-            .authenticationEntryPoint(http401UnauthorizedEntryPoint())
+//        .and()
+//            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
+//            .exceptionHandling()
+//            .authenticationEntryPoint(http401UnauthorizedEntryPoint())
         .and()
             .rememberMe()
             .rememberMeServices(rememberMeServices)

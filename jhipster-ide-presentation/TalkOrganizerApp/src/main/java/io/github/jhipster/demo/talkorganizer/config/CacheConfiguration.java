@@ -18,7 +18,7 @@ import org.springframework.context.annotation.*;
 @Configuration
 @EnableCaching
 @AutoConfigureAfter(value = { MetricsConfiguration.class })
-@AutoConfigureBefore(value = { WebConfigurer.class, DatabaseConfiguration.class })
+@AutoConfigureBefore(value = { /*WebConfigurer.class,*/ DatabaseConfiguration.class })
 public class CacheConfiguration {
 
     private final javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration;

@@ -2,7 +2,7 @@ package io.github.jhipster.demo.talkorganizer;
 
 import io.github.jhipster.demo.talkorganizer.config.ApplicationProperties;
 import io.github.jhipster.demo.talkorganizer.config.DefaultProfileUtil;
-
+import io.github.jhipster.demo.talkorganizer.config.ServletConfiguration;
 import io.github.jhipster.config.JHipsterConstants;
 
 import org.slf4j.Logger;
@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
@@ -21,7 +22,8 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
-@ComponentScan
+@ComponentScan(basePackages = {"io.github.jhipster.demo.talkorganizer", "org.eclipse.scout.boot"})
+@Import({ServletConfiguration.class})
 @EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class})
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
 public class TalkOrganizerApp {
