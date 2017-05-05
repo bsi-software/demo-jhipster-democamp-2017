@@ -42,11 +42,23 @@
     <requirement
         name="io.github.jhipster.jdl.feature.feature.group"/>
     <requirement
+        name="xdockerdsl.feature.feature.group"/>
+    <requirement
+        name="net.sourceforge.plantuml.ecore.feature.feature.group"/>
+    <requirement
         name="net.sourceforge.plantuml.feature.feature.group"/>
     <requirement
-        name="xdockerdsl.feature.feature.group"/>
+        name="net.sourceforge.plantuml.lib.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.tm.terminal.view.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.tm.terminal.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.tm.terminal.control.feature.feature.group"/>
+    <requirement
+        name="org.eclipse.tm.terminal.connector.local.feature.feature.group"/>
     <repository
-        url="https://dl.bintray.com/jhipster/jhipster-ide/io.github.jhipster-ide-1.1.1/"/>
+        url="https://dl.bintray.com/jhipster/jhipster-ide/io.github.jhipster-ide-1.2.0-SNAPSHOT"/>
   </setupTask>
   <setupTask
       xsi:type="setup.p2:P2Task">
